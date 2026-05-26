@@ -1677,7 +1677,8 @@ body::after {
     width: 130%
   }
   .menu__body {
-    padding-top: 80px
+    padding-top: 80px;
+    overflow: hidden
   }
   .menu__list {
     flex-direction: column;
@@ -1937,7 +1938,9 @@ body::after {
     margin-top: 0
   }
   .cases__slide {
-    border-radius: 20px
+    border-radius: 20px;
+    height: -webkit-max-content;
+    height: max-content
   }
   .actions-cases__navigations {
     display: none
@@ -2059,10 +2062,12 @@ body::after {
     gap: 28px
   }
   .slide-posters__magazin {
-    width: 291px;
+    width: 100%;
     height: 390px;
     aspect-ratio: 97/130;
-    border-radius: 20px
+    border-radius: 20px;
+    -o-object-fit: cover;
+    object-fit: cover
   }
   .slide-posters__btn {
     padding: 12px 32px;
