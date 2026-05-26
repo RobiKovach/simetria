@@ -1974,7 +1974,7 @@ body::after {
     right: 10px
   }
   .slide-cases__hovered {
-    gap: 16px;
+    gap: 12px;
     padding: 20px 10px
   }
   .top-cases__label {
