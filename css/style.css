@@ -624,6 +624,9 @@ body::after {
   justify-content: space-between;
   max-width: 820px
 }
+.hero__info-thanks {
+  justify-content: normal!important
+}
 .hero__titles {
   display: flex;
   flex-direction: column;
@@ -990,10 +993,16 @@ body::after {
 .cases__slider-wrap._active {
   margin-top: 19px
 }
+.cases__slider {
+  overflow: visible!important
+}
 .cases__slide {
   border-radius: 30px;
   overflow: hidden;
   position: relative
+}
+.cases__slider2 {
+  overflow: visible!important
 }
 .actions-cases__tabs {
   width: 46%;
@@ -1984,7 +1993,7 @@ body::after {
     font-size: 20px
   }
   .hovered-cases__text {
-    font-size: 13px;
+    font-size: 12px;
     gap: 12px
   }
   .faq__container {
