@@ -4076,17 +4076,18 @@
             document.querySelector(".cases-button-next2").style.display = isAdults ? "none" : "";
         });
     });
-    document.addEventListener("click", function(e) {
-        const btn = e.target.closest(".slide-cases__bnt");
-        if (!btn) return;
-        const slide = btn.closest(".slide-cases");
-        if (!slide) return;
-        const hovered = slide.querySelector(".slide-cases__hovered");
-        const isOpen = hovered.classList.contains("_hovered");
-        document.querySelectorAll(".slide-cases__hovered._hovered").forEach(el => {
-            el.classList.remove("_hovered");
+    document.querySelectorAll(".cases__slide").forEach(slide => {
+        slide.addEventListener("mouseenter", function() {
+            document.querySelectorAll(".slide-cases__hovered._hovered").forEach(el => {
+                el.classList.remove("_hovered");
+            });
+            const hovered = this.querySelector(".slide-cases__hovered");
+            if (hovered) hovered.classList.add("_hovered");
         });
-        if (!isOpen) hovered.classList.add("_hovered");
+        slide.addEventListener("mouseleave", function() {
+            const hovered = this.querySelector(".slide-cases__hovered");
+            if (hovered) hovered.classList.remove("_hovered");
+        });
     });
     document.addEventListener("click", function(e) {
         if (e.target.closest(".slide-cases__bnt")) return;

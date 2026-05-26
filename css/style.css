@@ -644,9 +644,12 @@ body::after {
   line-height: 22px;
   max-width: 432px
 }
-.hero__teeth {
+.hero__teethpc {
   width: 100%;
   margin-top: -12%
+}
+.hero__teeth {
+  display: none
 }
 .hero__btn {
   margin-top: 10px;
@@ -1821,7 +1824,11 @@ body::after {
     line-height: 102%;
     max-width: 303px
   }
+  .hero__teethpc {
+    display: none
+  }
   .hero__teeth {
+    display: flex;
     width: 130%;
     margin-top: 0
   }
