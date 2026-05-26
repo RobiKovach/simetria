@@ -4088,11 +4088,14 @@
             const hovered = this.querySelector(".slide-cases__hovered");
             if (hovered) hovered.classList.remove("_hovered");
         });
-    });
-    document.addEventListener("click", function(e) {
-        if (e.target.closest(".slide-cases__bnt")) return;
-        if (!e.target.closest(".slide-cases__hovered")) document.querySelectorAll(".slide-cases__hovered._hovered").forEach(el => {
-            el.classList.remove("_hovered");
+        slide.addEventListener("click", function() {
+            const hovered = this.querySelector(".slide-cases__hovered");
+            if (!hovered) return;
+            const isOpen = hovered.classList.contains("_hovered");
+            document.querySelectorAll(".slide-cases__hovered._hovered").forEach(el => {
+                el.classList.remove("_hovered");
+            });
+            if (!isOpen) hovered.classList.add("_hovered");
         });
     });
     (function() {
@@ -4111,7 +4114,7 @@
         });
     }
     document.addEventListener("DOMContentLoaded", fillUtmFields);
-    const WEBHOOK_URL = "https://your-webhook-url.com/endpoint";
+    const WEBHOOK_URL = "https://hook.eu1.make.com/t6lx5g2tvxhxuevdl06vyb33q56udcrx";
     document.getElementById("form-submit").addEventListener("click", async function() {
         const form = document.getElementById("consultation-form");
         const status = document.getElementById("form-status");
