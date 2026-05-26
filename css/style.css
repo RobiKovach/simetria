@@ -383,7 +383,8 @@ body::after {
   display: none
 }
 .menu-open .menu__body {
-  background-color: #a9aff5
+  background-color: #a9aff5;
+  height: 100vh
 }
 .menu__list {
   display: flex;
